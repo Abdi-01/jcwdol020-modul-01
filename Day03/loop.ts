@@ -41,7 +41,6 @@ while (count < 5) {
  */
 
 let countB: number = 0;
-
 do {
     console.log(`Loop Ke-${countB}`);
     countB++;
