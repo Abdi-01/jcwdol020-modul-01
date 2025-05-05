@@ -133,3 +133,17 @@ manusia.push(new Human("Halda", "Female"));
 console.log(manusia[0].introduce());
 console.log(manusia[2].introduce());
 
+// INHERITANCE ==> pewarisan data dari class utama agar dapat digunakan oleh class turunannya
+class Employee extends Human {
+    salary: number;
+    position: string;
+
+    constructor(_name: string, _gender: string, _salary: number, _position: string) {
+        super(_name, _gender);
+        this.salary = _salary;
+        this.position = _position;
+    }
+}
+
+const pegawai = new Employee("Abdi", "Male", 3000000, "Coder");
+console.log(pegawai);
