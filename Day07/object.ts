@@ -81,3 +81,55 @@ console.log(printData);
  * 2. Edo berumur 16 tahun merupakan siswa aktif
  * 3. Michel berumur 16 tahun merupakan siswa tidak aktif
  */
+
+// CLASS OBJECT : blue print untuk membuat suatu object
+
+/**
+ * Aturan penulisan :
+ * class ClassName{
+ *      constructor(arg1, arg2,...){
+ *          this.propertyArg1 = arg1;
+ *          this.propertyArg2 = arg2;
+ *      }
+ * 
+ *      method = function(){
+ *          - taskCode
+ *      }
+ * }
+ */
+
+class Human {
+    // Define public property
+    name: string;
+    gender: string;
+
+    constructor(_name: string, _gender: string) {
+        this.name = _name;
+        this.gender = _gender;
+    }
+
+    introduce = function () {
+        return `My name is ${this.name}`;
+    }
+}
+
+// Without class
+const humanA = {
+    name: "aldo",
+    gender: "Male"
+}
+
+// With class
+const humanB = new Human("Edo", "Male");
+
+const manusia: Human[] = [
+    new Human("Edi", "Male"),
+    new Human("Aldi", "Male"),
+    new Human("Michel", "Female")
+];
+
+manusia.push(new Human("Halda", "Female"));
+
+console.log(manusia[0].introduce());
+console.log(manusia[2].introduce());
+
